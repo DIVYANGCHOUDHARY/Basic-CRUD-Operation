@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express(); 
 const port = 3004
+const mysql = require("./connection").con
 
 // configuration
 app.set("view engine", "hbs");
@@ -27,6 +28,11 @@ app.get("/delete", (req, res) => {
 app.get("/view", (req, res) => {
     res.render("view")
 });
+
+app.get("/addstudent", (req, res)=>{
+    // fetching data from the form
+    res.send
+})
 
 // Create Server
 app.listen(port, (err) =>{
